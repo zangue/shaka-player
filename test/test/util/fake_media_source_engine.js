@@ -48,6 +48,8 @@ shaka.test.FakeMediaSourceEngine = class {
       this.timestampOffsets_[type] = data.timestampOffset || 0;
     }
 
+    this.attach = jasmine.createSpy('attach').and.stub();
+
     /** @type {!jasmine.Spy} */
     this.init = jasmine.createSpy('init').and.returnValue(Promise.resolve());
 
